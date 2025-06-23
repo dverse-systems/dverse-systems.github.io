@@ -65,78 +65,66 @@
   </style>
 </head>
 
-  <body class="font-inter text-gray-800">
-    <!-- Top Navigation -->
-    <header class="fixed top-0 left-0 right-0 glassmorphic z-50">
-      <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <h1 class="text-2xl font-extrabold font-mono gradient-text">d-verse</h1>
-        <div class="space-x-6">
-          <a href="#intro" class="text-slate-300 hover:text-dverse-purple font-normal transition">Introduction</a>
-          <a href="#modules" class="text-slate-300 hover:text-dverse-purple font-normal transition">Core Modules</a>
-          <a href="#api" class="text-slate-300 hover:text-dverse-purple font-normal transition">API Demo</a>
-          <a
-            href="https://github.com/dverse-systems"
-            target="_blank"
-            class="inline-flex items-center px-4 py-2 bg-transparent border border-slate-300 text-slate-300 font-normal rounded-full transition hover:bg-white hover:text-dverse-purple"
-          >
-            <i class="fab fa-github mr-2"></i> GitHub
-          </a>
-        </div>
-      </nav>
-    </header>
-
-    <!-- Main Content -->
-    <main class="container mx-auto px-6 py-12 mt-16">
-      <!-- Introduction Section -->
-      <section id="intro" class="py-12 text-center">
-        <h2 class="text-4xl font-bold mb-4 font-mono gradient-text">Welcome to d-verse</h2>
-        <p class="text-lg text-gray-600 mb-6 max-w-xl mx-auto">
-          A decentralized framework for building trust-aware, capsule-powered apps that run securely on user devices — no servers, no chains.
+<body class="font-inter text-gray-800">
+  <!-- Main Content -->
+  <main class="container mx-auto px-6 py-12">
+    <!-- Introduction Section -->
+    <section id="intro" class="py-12 text-center">
+      <h2 class="text-4xl font-bold mb-4 font-mono gradient-text">Welcome to d-verse</h2>
+      <p class="text-lg text-gray-600 mb-6 max-w-xl mx-auto">
+        A decentralized framework for building trust-aware, capsule-powered apps that run securely on user devices — no servers, no chains.
+      </p>
+      <div class="bg-light-bg p-8 rounded-xl">
+        <h3 class="text-xl font-semibold font-mono mb-4 gradient-text">Why d-verse?</h3>
+        <p class="text-gray-600">
+          d-verse empowers developers to create offline-first applications with verifiable data and peer-to-peer sync, redefining digital systems without cloud dependency.
         </p>
-        <div class="bg-light-bg p-8 rounded-xl">
-          <h3 class="text-xl font-semibold font-mono mb-4 gradient-text">Why d-verse?</h3>
-          <p class="text-gray-600">
-            d-verse empowers developers to create offline-first applications with verifiable data and peer-to-peer sync, redefining digital systems without cloud dependency.
-          </p>
-        </div>
-      </section>
+        <a
+          href="https://github.com/dverse-systems"
+          target="_blank"
+          class="inline-flex items-center px-4 py-2 mt-4 bg-transparent border border-slate-300 text-slate-300 font-normal rounded-full transition hover:bg-white hover:text-dverse-purple"
+        >
+          <i class="fab fa-github mr-2"></i> GitHub
+        </a>
+      </div>
+    </section>
 
-      <!-- Core Modules Section -->
-      <section id="modules" class="py-12">
-        <h2 class="text-3xl font-bold mb-6 font-mono gradient-text">Core Modules</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="bg-light-bg p-6 rounded-xl">
-            <h3 class="text-lg font-semibold font-mono mb-2 gradient-text">dverse-runtime</h3>
-            <p class="text-gray-600">Secure WASM runtime for executing signed logic securely on-device.</p>
-          </div>
-          <div class="bg-light-bg p-6 rounded-xl">
-            <h3 class="text-lg font-semibold font-mono mb-2 gradient-text">dverse-dag</h3>
-            <p class="text-gray-600">Trust-aware DAG for tracking capsule lineage and validating identities.</p>
-          </div>
-          <div class="bg-light-bg p-6 rounded-xl">
-            <h3 class="text-lg font-semibold font-mono mb-2 gradient-text">dverse-did</h3>
-            <p class="text-gray-600">Decentralized identity layer with keypair generation and signature verification.</p>
-          </div>
-          <div class="bg-light-bg p-6 rounded-xl">
-            <h3 class="text-lg font-semibold font-mono mb-2 gradient-text">dverse-net</h3>
-            <p class="text-gray-600">P2P sync with DHT-based routing and optional relay support.</p>
-          </div>
-          <div class="bg-light-bg p-6 rounded-xl">
-            <h3 class="text-lg font-semibold font-mono mb-2 gradient-text">dverse-relay</h3>
-            <p class="text-gray-600">Federated relay nodes for NAT traversal, moderation, and sync caching.</p>
-          </div>
-          <div class="bg-light-bg p-6 rounded-xl">
-            <h3 class="text-lg font-semibold font-mono mb-2 gradient-text">dverse-storage</h3>
-            <p class="text-gray-600">Encrypted, hash-addressed blob storage for portable content sharing.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- API Demo Section -->
-      <section id="api" class="py-12">
-        <h2 class="text-3xl font-bold mb-6 font-mono gradient-text">d-verse API in Rust</h2>
+    <!-- Core Modules Section -->
+    <section id="modules" class="py-12">
+      <h2 class="text-3xl font-bold mb-6 font-mono gradient-text">Core Modules</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div class="bg-light-bg p-6 rounded-xl">
-          <pre class="line-numbers"><code class="language-rust">use dverse::{Runtime, NetConfig, Capsule};
+          <h3 class="text-lg font-semibold font-mono mb-2 gradient-text">dverse-runtime</h3>
+          <p class="text-gray-600">Secure WASM runtime for executing signed logic securely on-device.</p>
+        </div>
+        <div class="bg-light-bg p-6 rounded-xl">
+          <h3 class="text-lg font-semibold font-mono mb-2 gradient-text">dverse-dag</h3>
+          <p class="text-gray-600">Trust-aware DAG for tracking capsule lineage and validating identities.</p>
+        </div>
+        <div class="bg-light-bg p-6 rounded-xl">
+          <h3 class="text-lg font-semibold font-mono mb-2 gradient-text">dverse-did</h3>
+          <p class="text-gray-600">Decentralized identity layer with keypair generation and signature verification.</p>
+        </div>
+        <div class="bg-light-bg p-6 rounded-xl">
+          <h3 class="text-lg font-semibold font-mono mb-2 gradient-text">dverse-net</h3>
+          <p class="text-gray-600">P2P sync with DHT-based routing and optional relay support.</p>
+        </div>
+        <div class="bg-light-bg p-6 rounded-xl">
+          <h3 class="text-lg font-semibold font-mono mb-2 gradient-text">dverse-relay</h3>
+          <p class="text-gray-600">Federated relay nodes for NAT traversal, moderation, and sync caching.</p>
+        </div>
+        <div class="bg-light-bg p-6 rounded-xl">
+          <h3 class="text-lg font-semibold font-mono mb-2 gradient-text">dverse-storage</h3>
+          <p class="text-gray-600">Encrypted, hash-addressed blob storage for portable content sharing.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- API Demo Section -->
+    <section id="api" class="py-12">
+      <h2 class="text-3xl font-bold mb-6 font-mono gradient-text">d-verse API in Rust</h2>
+      <div class="bg-light-bg p-6 rounded-xl">
+        <pre class="line-numbers"><code class="language-rust">use dverse::{Runtime, NetConfig, Capsule};
 use std::error::Error;
 
 #[tokio::main]
@@ -161,12 +149,12 @@ async fn main() -> Result<(), Box<dyn Error>> {
     Ok(())
 }
 </code></pre>
-        </div>
-      </section>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <footer class="bg-light-bg text-center text-sm py-6 px-4 text-gray-600">
-      © 2025 Kriyaetive. Built with capsules, trust, and the future in mind.
-    </footer>
-  </body>
+  <footer class="bg-light-bg text-center text-sm py-6 px-4 text-gray-600">
+    © 2025 Kriyaetive. Built with capsules, trust, and the future in mind.
+  </footer>
+</body>
 </html>
