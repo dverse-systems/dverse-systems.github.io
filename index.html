@@ -1,124 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>D-Verse – Decentralized, Trust-Aware Framework</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      background: #ffffff;
-      color: #1a1a1a;
-      line-height: 1.6;
-    }
-    header {
-      background: #0f172a;
-      color: white;
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-    header p {
-      font-size: 1.2rem;
-      color: #cbd5e1;
-    }
-    section {
-      padding: 4rem 2rem;
-      max-width: 960px;
-      margin: auto;
-    }
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 2rem;
-    }
-    .feature {
-      background: #f9fafb;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-    }
-    .feature h3 {
-      margin-top: 0;
-      color: #0f172a;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      background: #f1f5f9;
-    }
-    a.button {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.75rem 1.5rem;
-      background: #0f172a;
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-  </style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D-Verse – Decentralized, Trust-Aware Framework</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Space+Mono&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              inter: ['Inter', 'sans-serif'],
+              mono: ['Space Mono', 'monospace'],
+            },
+          },
+        },
+      }
+    </script>
+  </head>
+  <body class="font-inter bg-white text-gray-900 leading-relaxed">
 
-  <header>
-    <h1>D-Verse</h1>
-    <p>Build trust-aware apps that sync peer-to-peer and run locally — without servers or chains.</p>
-    <a href="https://github.com/dverse-systems" class="button">View on GitHub</a>
-  </header>
+    <header class="bg-slate-900 text-white text-center py-16 px-6">
+      <h1 class="text-4xl font-extrabold font-mono mb-2">D-Verse</h1>
+      <p class="text-lg text-slate-300 max-w-xl mx-auto">
+        Build trust-aware apps that sync peer-to-peer and run locally — without servers or chains.
+      </p>
+      <a
+        href="https://github.com/dverse-systems"
+        class="inline-block mt-6 px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-md transition"
+      >
+        View on GitHub
+      </a>
+    </header>
 
-  <section>
-    <h2>What is D-Verse?</h2>
-    <p>
-      D-Verse is a decentralized framework for building capsule-powered applications that execute securely and independently on user devices. Designed for trust-aware logic, offline-first operations, and verifiable data, it reimagines how digital systems work without central servers or cloud lock-in.
-    </p>
-  </section>
+    <section class="py-16 px-6 max-w-4xl mx-auto">
+      <h2 class="text-2xl font-bold mb-4 font-mono">What is D-Verse?</h2>
+      <p>
+        D-Verse is a decentralized framework for building capsule-powered applications that execute securely and independently on user devices. Designed for trust-aware logic, offline-first operations, and verifiable data, it reimagines how digital systems work without central servers or cloud lock-in.
+      </p>
+    </section>
 
-  <section>
-    <h2>Core Modules</h2>
-    <div class="features">
-      <div class="feature">
-        <h3>kapsule-rt</h3>
-        <p>Local WASM runtime for executing signed logic securely on-device.</p>
+    <section class="py-16 px-6 max-w-6xl mx-auto">
+      <h2 class="text-2xl font-bold mb-8 font-mono">Core Modules</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+          <h3 class="text-xl font-semibold text-slate-900 font-mono mb-2">kapsule-rt</h3>
+          <p>Local WASM runtime for executing signed logic securely on-device.</p>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+          <h3 class="text-xl font-semibold text-slate-900 font-mono mb-2">dverse-dag</h3>
+          <p>Trust-aware DAG for tracking capsule lineage and validating identities.</p>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+          <h3 class="text-xl font-semibold text-slate-900 font-mono mb-2">dverse-did</h3>
+          <p>Decentralized identity layer with keypair generation and signature verification.</p>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+          <h3 class="text-xl font-semibold text-slate-900 font-mono mb-2">dverse-net</h3>
+          <p>P2P sync with DHT-based routing and optional relay support.</p>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+          <h3 class="text-xl font-semibold text-slate-900 font-mono mb-2">dverse-relay</h3>
+          <p>Federated relay nodes for NAT traversal, moderation, and sync caching.</p>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+          <h3 class="text-xl font-semibold text-slate-900 font-mono mb-2">dverse-storage</h3>
+          <p>Encrypted, hash-addressed blob storage for portable content sharing.</p>
+        </div>
       </div>
-      <div class="feature">
-        <h3>dverse-dag</h3>
-        <p>Trust-aware DAG for tracking capsule lineage and validating identities.</p>
-      </div>
-      <div class="feature">
-        <h3>dverse-did</h3>
-        <p>Decentralized identity layer with keypair generation and signature verification.</p>
-      </div>
-      <div class="feature">
-        <h3>dverse-net</h3>
-        <p>P2P sync with DHT-based routing and optional relay support.</p>
-      </div>
-      <div class="feature">
-        <h3>dverse-relay</h3>
-        <p>Federated relay nodes for NAT traversal, moderation, and sync caching.</p>
-      </div>
-      <div class="feature">
-        <h3>dverse-storage</h3>
-        <p>Encrypted, hash-addressed blob storage for portable content sharing.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section>
-    <h2>Architecture Preview</h2>
-    <p>Visualize how D-Verse modules work together to build portable, local-first systems.</p>
-    <img src="architecture-diagram.png" alt="D-Verse Architecture Diagram" style="width:100%;max-width:800px;border-radius:8px;margin-top:1rem;" />
-  </section>
+    <section class="py-16 px-6 max-w-4xl mx-auto">
+      <h2 class="text-2xl font-bold mb-4 font-mono">Architecture Preview</h2>
+      <p>Visualize how D-Verse modules work together to build portable, local-first systems.</p>
+      <img
+        src="architecture-diagram.png"
+        alt="D-Verse Architecture Diagram"
+        class="w-full max-w-3xl rounded-lg mt-6 mx-auto"
+      />
+    </section>
 
-  <footer>
-    © 2025 Kriyaetive. Built with capsules, trust, and the future in mind.
-  </footer>
+    <footer class="bg-slate-100 text-center text-sm py-6 px-4">
+      © 2025 Kriyaetive. Built with capsules, trust, and the future in mind.
+    </footer>
 
-</body>
+  </body>
 </html>
