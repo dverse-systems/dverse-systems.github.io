@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>D-Verse – Decentralized, Trust-Aware Framework</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Space+Mono&display=swap" rel="stylesheet">
+    <title>d-verse – Decentralized, Trust-Aware Framework</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Mono&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/1b3b4e2a35.js" crossorigin="anonymous"></script>
     <script>
       tailwind.config = {
         theme: {
@@ -14,76 +15,89 @@
               inter: ['Inter', 'sans-serif'],
               mono: ['Space Mono', 'monospace'],
             },
+            colors: {
+              'dverse-purple': '#7e22ce',
+              'dverse-purple-dark': '#6b21a8',
+              accent: '#c026d3',
+            },
           },
         },
       }
     </script>
+    <style>
+      .hover-scale {
+        transition: transform 0.3s ease;
+      }
+      .hover-scale:hover {
+        transform: scale(1.03);
+      }
+      .card-shadow {
+        box-shadow: 0 0 20px rgba(126, 34, 206, 0.1);
+      }
+      .card-shadow:hover {
+        box-shadow: 0 0 15px rgba(126, 34, 206, 0.2);
+      }
+      .gradient-text {
+        background: linear-gradient(to right, #7e22ce, #c026d3);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
   </head>
-  <body class="font-inter bg-white text-gray-900 leading-relaxed">
-
-    <header class="bg-slate-900 text-white text-center py-16 px-6">
-      <h1 class="text-4xl font-extrabold font-mono mb-2">D-Verse</h1>
-      <p class="text-lg text-slate-300 max-w-xl mx-auto">
-        Build trust-aware apps that sync peer-to-peer and run locally — without servers or chains.
+  <body class="bg-white font-inter text-gray-900">
+    <header class="bg-white text-center py-16 px-6">
+      <h1 class="text-4xl md:text-5xl font-extrabold font-mono mb-4 gradient-text">d-verse</h1>
+      <p class="text-lg text-gray-600 max-w-xl mx-auto">
+        Build trust-aware apps with peer-to-peer sync, running locally — no servers, no chains.
       </p>
       <a
         href="https://github.com/dverse-systems"
-        class="inline-block mt-6 px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-md transition"
+        target="_blank"
+        class="inline-flex items-center mt-6 px-6 py-3 bg-dverse-purple hover:bg-dverse-purple-dark text-white font-semibold rounded-md transition hover-scale"
       >
-        View on GitHub
+        <i class="fab fa-github mr-2 text-lg"></i> Explore on GitHub
       </a>
     </header>
 
     <section class="py-16 px-6 max-w-4xl mx-auto">
-      <h2 class="text-2xl font-bold mb-4 font-mono">What is D-Verse?</h2>
-      <p>
-        D-Verse is a decentralized framework for building capsule-powered applications that execute securely and independently on user devices. Designed for trust-aware logic, offline-first operations, and verifiable data, it reimagines how digital systems work without central servers or cloud lock-in.
+      <h2 class="text-3xl font-semibold mb-6 font-mono gradient-text">What is d-verse?</h2>
+      <p class="text-gray-600 text-lg leading-7">
+        d-verse is a sleek, decentralized framework for crafting secure, capsule-powered apps that run directly on user devices. Designed for trust-aware logic, offline-first operations, and verifiable data, it redefines digital systems without central servers or cloud infrastructure.
       </p>
     </section>
 
     <section class="py-16 px-6 max-w-6xl mx-auto">
-      <h2 class="text-2xl font-bold mb-8 font-mono">Core Modules</h2>
+      <h2 class="text-3xl font-semibold mb-8 font-mono gradient-text">Core Modules</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
-          <h3 class="text-xl font-semibold text-slate-900 font-mono mb-2">kapsule-rt</h3>
-          <p>Local WASM runtime for executing signed logic securely on-device.</p>
+        <div class="bg-white p-6 rounded-lg card-shadow hover-scale">
+          <h3 class="text-lg font-semibold font-mono mb-2 gradient-text">dverse-runtime</h3>
+          <p class="text-gray-600">Secure WASM runtime for executing signed logic securely on-device.</p>
         </div>
-        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
-          <h3 class="text-xl font-semibold text-slate-900 font-mono mb-2">dverse-dag</h3>
-          <p>Trust-aware DAG for tracking capsule lineage and validating identities.</p>
+        <div class="bg-white p-6 rounded-lg card-shadow hover-scale">
+          <h3 class="text-lg font-semibold font-mono mb-2 gradient-text">dverse-dag</h3>
+          <p class="text-gray-600">Trust-aware DAG for tracking capsule lineage and validating identities.</p>
         </div>
-        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
-          <h3 class="text-xl font-semibold text-slate-900 font-mono mb-2">dverse-did</h3>
-          <p>Decentralized identity layer with keypair generation and signature verification.</p>
+        <div class="bg-white p-6 rounded-lg card-shadow hover-scale">
+          <h3 class="text-lg font-semibold font-mono mb-2 gradient-text">dverse-did</h3>
+          <p class="text-gray-600">Decentralized identity layer with keypair generation and signature verification.</p>
         </div>
-        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
-          <h3 class="text-xl font-semibold text-slate-900 font-mono mb-2">dverse-net</h3>
-          <p>P2P sync with DHT-based routing and optional relay support.</p>
+        <div class="bg-white p-6 rounded-lg card-shadow hover-scale">
+          <h3 class="text-lg font-semibold font-mono mb-2 gradient-text">dverse-net</h3>
+          <p class="text-gray-600">P2P sync with DHT-based routing and optional relay support.</p>
         </div>
-        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
-          <h3 class="text-xl font-semibold text-slate-900 font-mono mb-2">dverse-relay</h3>
-          <p>Federated relay nodes for NAT traversal, moderation, and sync caching.</p>
+        <div class="bg-white p-6 rounded-lg card-shadow hover-scale">
+          <h3 class="text-lg font-semibold font-mono mb-2 gradient-text">dverse-relay</h3>
+          <p class="text-gray-600">Federated relay nodes for NAT traversal, moderation, and sync caching.</p>
         </div>
-        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
-          <h3 class="text-xl font-semibold text-slate-900 font-mono mb-2">dverse-storage</h3>
-          <p>Encrypted, hash-addressed blob storage for portable content sharing.</p>
+        <div class="bg-white p-6 rounded-lg card-shadow hover-scale">
+          <h3 class="text-lg font-semibold font-mono mb-2 gradient-text">dverse-storage</h3>
+          <p class="text-gray-600">Encrypted, hash-addressed blob storage for portable content sharing.</p>
         </div>
       </div>
     </section>
 
-    <section class="py-16 px-6 max-w-4xl mx-auto">
-      <h2 class="text-2xl font-bold mb-4 font-mono">Architecture Preview</h2>
-      <p>Visualize how D-Verse modules work together to build portable, local-first systems.</p>
-      <img
-        src="architecture-diagram.png"
-        alt="D-Verse Architecture Diagram"
-        class="w-full max-w-3xl rounded-lg mt-6 mx-auto"
-      />
-    </section>
-
-    <footer class="bg-slate-100 text-center text-sm py-6 px-4">
+    <footer class="bg-gray-50 text-center text-sm py-6 px-4 text-gray-600">
       © 2025 Kriyaetive. Built with capsules, trust, and the future in mind.
     </footer>
-
   </body>
 </html>
