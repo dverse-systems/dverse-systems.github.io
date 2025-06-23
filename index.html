@@ -71,90 +71,11 @@
     <!-- Introduction Section -->
     <section id="intro" class="py-12 text-center">
       <h2 class="text-4xl font-bold mb-4 font-mono gradient-text">Welcome to d-verse</h2>
-      <p class="text-lg text-gray-600 mb-6 max-w-xl mx-auto">
-        A decentralized framework for building trust-aware, capsule-powered apps that run securely on user devices — no servers, no chains.
-      </p>
-      <div class="bg-light-bg p-8 rounded-xl">
-        <h3 class="text-xl font-semibold font-mono mb-4 gradient-text">Why d-verse?</h3>
-        <p class="text-gray-600">
-          d-verse empowers developers to create offline-first applications with verifiable data and peer-to-peer sync, redefining digital systems without cloud dependency.
-        </p>
-        <a
-          href="https://github.com/dverse-systems"
-          target="_blank"
-          class="inline-flex items-center px-4 py-2 mt-4 bg-transparent border border-slate-300 text-slate-300 font-normal rounded-full transition hover:bg-white hover:text-dverse-purple"
-        >
-          <i class="fab fa-github mr-2"></i> GitHub
-        </a>
-      </div>
-    </section>
-
-    <!-- Core Modules Section -->
-    <section id="modules" class="py-12">
-      <h2 class="text-3xl font-bold mb-6 font-mono gradient-text">Core Modules</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-light-bg p-6 rounded-xl">
-          <h3 class="text-lg font-semibold font-mono mb-2 gradient-text">dverse-runtime</h3>
-          <p class="text-gray-600">Secure WASM runtime for executing signed logic securely on-device.</p>
-        </div>
-        <div class="bg-light-bg p-6 rounded-xl">
-          <h3 class="text-lg font-semibold font-mono mb-2 gradient-text">dverse-dag</h3>
-          <p class="text-gray-600">Trust-aware DAG for tracking capsule lineage and validating identities.</p>
-        </div>
-        <div class="bg-light-bg p-6 rounded-xl">
-          <h3 class="text-lg font-semibold font-mono mb-2 gradient-text">dverse-did</h3>
-          <p class="text-gray-600">Decentralized identity layer with keypair generation and signature verification.</p>
-        </div>
-        <div class="bg-light-bg p-6 rounded-xl">
-          <h3 class="text-lg font-semibold font-mono mb-2 gradient-text">dverse-net</h3>
-          <p class="text-gray-600">P2P sync with DHT-based routing and optional relay support.</p>
-        </div>
-        <div class="bg-light-bg p-6 rounded-xl">
-          <h3 class="text-lg font-semibold font-mono mb-2 gradient-text">dverse-relay</h3>
-          <p class="text-gray-600">Federated relay nodes for NAT traversal, moderation, and sync caching.</p>
-        </div>
-        <div class="bg-light-bg p-6 rounded-xl">
-          <h3 class="text-lg font-semibold font-mono mb-2 gradient-text">dverse-storage</h3>
-          <p class="text-gray-600">Encrypted, hash-addressed blob storage for portable content sharing.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- API Demo Section -->
-    <section id="api" class="py-12">
-      <h2 class="text-3xl font-bold mb-6 font-mono gradient-text">d-verse API in Rust</h2>
-      <div class="bg-light-bg p-6 rounded-xl">
-        <pre class="line-numbers"><code class="language-rust">use dverse::{Runtime, NetConfig, Capsule};
-use std::error::Error;
-
-#[tokio::main]
-async fn main() -> Result<(), Box<dyn Error>> {
-    // Initialize d-verse runtime
-    let runtime = Runtime::new().await?;
-
-    // Configure P2P network
-    let net_config = NetConfig::default()
-        .with_dht(true)
-        .with_relay("relay.dverse.io:8080");
-    runtime.start_network(net_config).await?;
-
-    // Create and sign a capsule
-    let mut capsule = Capsule::new("sample_data".to_string());
-    capsule.sign(&runtime.keypair())?;
-
-    // Sync capsule via P2P
-    runtime.sync_capsule(&capsule).await?;
-
-    println!("Capsule synced: {:?}", capsule.hash());
-    Ok(())
-}
-</code></pre>
-      </div>
     </section>
   </main>
 
   <footer class="bg-light-bg text-center text-sm py-6 px-4 text-gray-600">
-    © 2025 Kriyaetive. Built with capsules, trust, and the future in mind.
+    © 2025 Kriyaetive.
   </footer>
 </body>
 </html>
